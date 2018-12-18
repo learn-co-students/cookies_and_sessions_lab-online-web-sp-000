@@ -1,0 +1,11 @@
+<h1>Whoa</h1>
+
+<%= form_tag({controller: "products", action: "add"}, method: "post") do %>
+  <%= label_tag "Add a product"%>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+<% cart.each do |p| %>
+  <p><%= p %></p>
+<% end %>
