@@ -1,0 +1,10 @@
+
+<%cart.each do |item|%>
+  <%=item%>
+<%end%>
+
+<form action="/add" method="POST">
+  <label>Product: </label><br>
+  <input type="text" name="product"><br>
+  <input type="submit" value="add to cart">
+</form>
