@@ -1,0 +1,14 @@
+<h2>Current cart contents:</h2>
+
+<% if !session['cart'].empty? %>
+  <% session['cart'].each do |product| %>
+  <li><%= product %></li>
+  <% end %>
+<% end %>
+
+<h2>Add item to cart:</h2>
+<%= form_tag({}, method: "post") do %>
+  <%= label_tag(:product, "Enter a Product:") %>
+  <%= text_field_tag(:product) %>
+  <%= button_tag("add to cart") %>
+<% end %>
