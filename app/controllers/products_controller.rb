@@ -4,5 +4,6 @@ class ProductsController < ApplicationController
   
   def add
     add_to_cart
+    binding.pry
   end
 end
