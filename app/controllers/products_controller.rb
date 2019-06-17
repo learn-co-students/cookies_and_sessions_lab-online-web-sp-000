@@ -3,6 +3,6 @@ class ProductsController < ApplicationController
   end
   
   def add
-    binding.pry
+    add_to_cart
   end
 end
