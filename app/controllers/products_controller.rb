@@ -4,6 +4,6 @@ class ProductsController < ApplicationController
   
   def add
     add_to_cart
-    binding.pry
+    redirect_to "/"
   end
 end
