@@ -3,5 +3,6 @@ class ProductsController < ApplicationController
   end
   
   def add
+    binding.pry
   end
 end
