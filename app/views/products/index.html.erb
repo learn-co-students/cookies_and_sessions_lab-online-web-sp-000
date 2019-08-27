@@ -1,0 +1,14 @@
+<h1>Cart</h1>
+<% @cart = cart %>
+<% if !@cart.nil? %>
+  <% @cart.each do |product| %>
+    <%= product %><br>
+  <% end%>
+<% end%>
+
+<%= form_tag add_path do %>
+  <label>Product</label>
+    <input type="text" id="product" name="product">
+  
+  <input type="submit" value="add to cart">
+<% end %>
