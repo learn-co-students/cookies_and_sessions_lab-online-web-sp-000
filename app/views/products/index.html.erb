@@ -1,9 +1,7 @@
 <ul>
-<% if @cart %>
-  <% @cart.each do |c|%>
+  <% cart.each do |c|%>
   <li><%= c %></li>
   <% end %>
-<% end %>
 <ul>
 
 <%= form_tag "/" do %>
