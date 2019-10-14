@@ -1,1 +1,12 @@
-hello index
+<ul>
+<% if @cart %>
+  <% @cart.each do |c|%>
+  <li><%= c %></li>
+  <% end %>
+<% end %>
+<ul>
+
+<%= form_tag "/" do %>
+  <input type="text" name="product">
+  <input type="submit" value="add to cart">
+<% end %>

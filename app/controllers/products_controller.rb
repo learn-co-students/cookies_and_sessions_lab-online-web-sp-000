@@ -1,5 +1,10 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
   def index
-    raise params.inspect
+    @cart=session[:cart]
+  end
+
+  def add
+    cart<<params[:product]
+    redirect_to '/'
   end
 end
