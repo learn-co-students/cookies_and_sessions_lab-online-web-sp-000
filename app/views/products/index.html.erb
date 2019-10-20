@@ -1,0 +1,17 @@
+
+<h1>Products#index</h1>
+
+# taps into helper method :cart to print off each item in cart
+<ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+# use form_tag to create 'add' form posting to the products_add_path
+
+<%= form_tag products_add_path do %>
+  <label>Product: </label>
+  <%= text_field_tag :product %>
+  <%= submit_tag 'add to cart' %>
+<% end %>
