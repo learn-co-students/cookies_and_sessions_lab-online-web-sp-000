@@ -1,0 +1,25 @@
+<!-- <h1>Add Products</h1>
+<form action="/add" method="post">
+  <input type="text" id="product" name="product">
+  <input type="submit" id="add_to_cart"value="add to cart">
+</form>
+above code will not work because it is not a form tag-->
+
+<h1>Add Products</h1>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
+
+
+<%if @cart %>
+  <h1>Cart</h1>
+  <% @cart.each do |item| %>
+    <ul>
+      <li><%= item%></li>
+    </ul>
+  <%end%>
+<%end%>

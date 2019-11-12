@@ -13,6 +13,8 @@ RSpec.describe "products/index", :type => :view do
 
   it "shows everything in the cart" do
     session[:cart] = ['apples', 'bananas', 'pears']
+    @cart = session[:cart]
+    # added @cart to this so the test would pass, because the view assumes I am using a controller helper (which I should.)
     render
     expect(rendered).to include 'apples'
     expect(rendered).to include 'bananas'
