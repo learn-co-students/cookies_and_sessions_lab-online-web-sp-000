@@ -1,7 +1,11 @@
+class ProductsController < ActionController::Base
+
 def index
-    render 'index'
+    
 end
 
 def add
-
+    session[:cart] = params[:product]
+    render 'index'
+end
 end
