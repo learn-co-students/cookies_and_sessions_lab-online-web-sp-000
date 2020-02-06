@@ -1,0 +1,12 @@
+<h1>Products</h1>
+
+Add item to Cart
+<%= form_tag("/products/add") do %>
+  <%= label_tag(:product, "name of item") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+
+Whats in the Cart:
+<%= current_cart %>
