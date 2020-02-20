@@ -1,0 +1,4 @@
+<%= form_for :cart, url: "/products" do |form| %>
+  <%= form.text_field :product %>
+  <%= form.submit "add to cart" %>
+<% end  %>
