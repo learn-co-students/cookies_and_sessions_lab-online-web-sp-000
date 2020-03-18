@@ -11,8 +11,6 @@ class ProductsController < ApplicationController
 
     session[:cart] = cart
 
-    redirect_to :index
-    #binding.pry
   end
 
 
