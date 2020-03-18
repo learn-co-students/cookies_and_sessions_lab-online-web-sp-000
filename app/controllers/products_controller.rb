@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     cart << item
 
     session[:cart] = cart
+    render :index
 
   end
 
