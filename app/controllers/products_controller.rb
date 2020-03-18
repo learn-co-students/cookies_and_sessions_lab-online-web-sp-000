@@ -1,21 +1,21 @@
 class ProductsController < ApplicationController
-  def add
-    binding.pry
-    cart << @item.id
-
-#     # Get the item from the path
-# @item = Item.find(params[:id])
-#
-# # Load the cart from the session, or create a new empty cart.
-# cart = session[:cart] || []
-# cart << @item.id
-#
-# # Save the cart in the session.
-# session[:cart] = cart
-  end
 
   def index
   end
+
+  def add
+    item = params[:product]
+
+    cart = session[:cart] || []
+    cart << item
+
+    session[:cart] = cart
+
+    redirect_to :index
+    #binding.pry
+  end
+
+
 
   private
 

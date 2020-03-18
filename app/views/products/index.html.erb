@@ -1,12 +1,14 @@
-<form action="/products/add" method="post">
-  <label>New Item</label>
-  <input type="text" name="product">
-    <!-- other inputs here -->
-  <input type="submit" value="add to cart">
-</form>
+<h1>Products Index</h1>
 
 <% if session[:cart]%>
   <% session[:cart].each do |item| %>
     <li><%= item %></li>
-  <% end %>
+  <%end%>
 <% end %>
+
+
+  <%= form_tag ({controller:'products', action: 'add', method: 'post'}) do %>
+
+    <input name='product'>
+    <input type="submit" name="add to cart" value="add to cart">
+  <%end%>
