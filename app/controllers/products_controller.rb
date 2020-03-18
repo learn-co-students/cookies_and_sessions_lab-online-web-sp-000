@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def add
-    #binding.pry
+    binding.pry
     cart << @item.id
 
 #     # Get the item from the path
@@ -14,12 +14,7 @@ class ProductsController < ApplicationController
 # session[:cart] = cart
   end
 
-  def add
-    binding.pry
-  end
-
   def index
-    #binding.pry
   end
 
   private
