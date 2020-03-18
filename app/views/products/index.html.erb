@@ -1,0 +1,12 @@
+<form action="/add" method="post">
+  <label>New Item</label>
+  <input type="text" name="product">
+    <!-- other inputs here -->
+  <input type="submit" value="add to cart">
+</form>
+
+<% if session[:cart]%>
+  <% session[:cart].each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+<% end %>
