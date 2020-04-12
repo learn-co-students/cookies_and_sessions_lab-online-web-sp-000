@@ -1,0 +1,13 @@
+<h1> Your Cart </h1>
+
+<% cart.each do |product| %> #The page will access the information stored in the cart's array and display it.
+    <%= product %>    
+<% end %>
+
+<h2> Add a Product </h2>
+
+
+<form action="/add" method="post">
+    <input type="text" name="product" id="product">
+    <button type="submit">add to cart</button>
+</form>
