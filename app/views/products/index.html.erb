@@ -1,0 +1,9 @@
+<h1>Items in Cart</h1>
+
+<ul>
+<% cart.each do |item| # if !cart.empty? %>
+    <li>
+        <%= item %>
+    </li>
+<% end # !cart.empty? %>
+</ul>
