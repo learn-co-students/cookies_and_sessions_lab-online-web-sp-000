@@ -2,14 +2,15 @@
 
 <h2>What's in your cart: </h2>
 <ul>
-  <% @cart.each do |item| %>
-    <li><%= item %></li>
+  <% if session[:cart] %>
+    <%= session[:cart].each do |item| %>
+      <li><% item %></li>
+    <% end %>
   <% end %>
 </ul>
 
-<%= form_tag "/products", method = "post" %>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<%= form_tag "/products" do %>
   <label for="product">Add an item to the cart: </label>
   <input type="text" name="product"><br>
-  <input type="submit" value="add to cart">
+  <input type="submit" id="add to cart" value="add to cart">
 <% end %>
