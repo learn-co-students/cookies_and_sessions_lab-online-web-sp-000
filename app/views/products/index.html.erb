@@ -1,0 +1,14 @@
+<h1>Cart<h1>
+
+<ul>
+  <%binding.pry if cart.nil?%>  
+  <% cart.each do |p| %>
+    <li><%= p %></li>
+  <% end %>
+</ul>
+
+<hr>
+<form action="/" method="post">
+    <input type="text" id="product" name="product">
+    <input type=submit value='add to cart'>
+</form> 
