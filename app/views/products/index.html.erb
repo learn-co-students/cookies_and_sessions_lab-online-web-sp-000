@@ -7,6 +7,6 @@
 <% end %>
 
 <%= content_tag(:h2, "Cart Contents") %>
-<% session[:cart].each do |product| %>
+<% cart.each do |product| %>
   <%= content_tag(:p, product) %>
 <% end %>
