@@ -1,0 +1,25 @@
+Your cart items:
+
+<% binding.pry %> 
+<% if cart != [] %> 
+   
+    <% cart.each do |product| %> 
+      
+        <%= product %> 
+    <% end %> 
+<% end %> 
+
+<br /> <br /> 
+Add an product: 
+<!--
+<form action="/products/add" method="post"> 
+    <input type="text" name="cart[product]"> 
+    <input type="submit" value="add product to cart"> 
+</form> 
+--> 
+
+<%= form_tag("/products/add", method: "post") do %> 
+    <%= text_field_tag :product %> 
+    <%= submit_tag "add to cart" %> 
+<% end %> 
+
