@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
     # ||= works like a || a = b
 
     # ! return session[:cart] or set session[:cart] equal to an empty array
+
+    # session[:cart] can either be a list of items or an empty list. Those are the only two options. 
     session[:cart] ||= []
   end
 end
