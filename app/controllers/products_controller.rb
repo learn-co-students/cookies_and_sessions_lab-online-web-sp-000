@@ -1,0 +1,15 @@
+require 'pry'
+
+class ProductsController < ApplicationController
+
+    def index
+
+    end
+
+    def add
+        binding.pry 
+        cart << params[:product]
+        redirect_to "/"
+    end
+
+end
