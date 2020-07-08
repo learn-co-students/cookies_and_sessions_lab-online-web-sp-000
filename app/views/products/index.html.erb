@@ -1,7 +1,13 @@
 
-<%= form_for @product do |f| %>
-  <%= f.label :name, "Name of Product" %>
-  <%= f.text_field :name %><br>
+<ul>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <%end%>
+</ul>
+<%# displays list of products %>
 
-  <%= f.submit, "Add to Cart" %>
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>
+  <input name=product>
+  <input type=submit value='add to cart'>
 <%end%>
+<%# creates an input for type of product and submit button %>
