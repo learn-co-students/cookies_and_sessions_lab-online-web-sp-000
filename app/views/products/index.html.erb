@@ -1,0 +1,22 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%# <form action="products/add" method="POST">
+<label for="product_id">Product:</label>
+   <input name="product" type="text" id="product_id"><br>
+   <input type="submit" value="Add">
+</form> %>
+
+<%= form_for(:session, url: products_add_path) do |f| %>
+   <%= f.label :product %>
+   <%= f.text_field :product, id: 'product' %>
+   <br>
+   <%= f.submit "add to cart"%>
+<% end %>
+
+
+<ul>
+<% cart.each do |product| %>
+   <li><%= product %></li>
+<% end %>
+</ul>
