@@ -1,0 +1,12 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+<form method="POST" action="/add">
+    <label for="product">Add Product: </label>
+        <input type="text" name="product" id="product">
+    
+        <input type="submit" id='submit' value='add to cart'>
+
+</form>
+<% cart.each do |item| %>
+    <%= item %>
+<% end%>
