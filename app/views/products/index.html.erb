@@ -1,0 +1,6 @@
+<%= form_tag("/add") do %>
+  <input type="text" name="product"></input>
+  <input type="submit" value="add to cart">
+<% end %><br>
+
+<p>Your cart: <%= session[:cart] %></p>
