@@ -4,15 +4,16 @@ index homepage
 name of a product, a submit button that adds it
 to their cart, and a display of what's in the cart. %>
 
-<h1>Products in your cart</h1>
-
-<% @cart.each do |item| %>
-  <li> <%= item %></li>
+<h1>Products</h1>
+<ul>
+<% cart.each do |item| %>
+  <li><%= item %></li>
 <% end %>
+</ul>
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
 
-<h1>Add a new item</h1>
-<form method='post' action='add'>
-    <label>New Product: </label>
-    <input type='text_field' name='product' id='product'><br>
-    <input type='submit' id='add to cart'>
-</form>
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
