@@ -1,4 +1,4 @@
-class ProductsController < ActionController::Base
+class ProductsController < ApplicationController
   protect_from_forgery except: :add
 
   def index
