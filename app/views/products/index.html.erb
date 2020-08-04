@@ -1,0 +1,11 @@
+<h1>Items In Cart</h1>
+<ul>
+<% session[:cart].each do |item| %>
+    <li><%= item %></li>
+<% end %>
+</ul>
+<h2>Add Items To Cart</h2>
+<form action="/add" method="post">
+    <input type="text" id="product" name="product">
+    <input type="submit" id="add to cart">
+</form>
