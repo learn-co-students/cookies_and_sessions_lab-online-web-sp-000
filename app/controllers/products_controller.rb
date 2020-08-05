@@ -5,10 +5,10 @@ class ProductsController < ApplicationController
     end
 
     def add
-        cart = session[:cart] ||= []
+        # cart = session[:cart] ||= []
         cart << product_params
-        session[:cart] = cart
-        redirect_to '/'
+        # session[:cart] = cart
+        render :index
     end
 
     private
