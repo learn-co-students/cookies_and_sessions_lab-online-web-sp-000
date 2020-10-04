@@ -1,9 +1,9 @@
-class ProductsController < ActionController
+class ProductsController < ApplicationController
     def index
         @products = Product.all
-        binding.pry
     end
 
     def new
+        @products = Product.new
     end
 end

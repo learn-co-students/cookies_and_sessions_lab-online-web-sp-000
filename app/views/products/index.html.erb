@@ -1,7 +1,9 @@
 <p>Welcome to Product Index</p>
-<% binding.pry %>       
 <ul>
   <% @products.each do |product| %>
-    <li><%= product %></li>
+    <li><%= product %> - <%= product.title %></li>
   <% end %>
 </ul>
+
+<h1>Add Items to the Cart</h1>
+
