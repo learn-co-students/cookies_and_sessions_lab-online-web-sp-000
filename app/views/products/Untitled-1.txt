@@ -5,3 +5,19 @@
   
 #     <%= f.submit %>
 #   <% end %>
+
+Homepage
+Product: Kumquats ---> Add to Cart
+
+Homepage
+Product list
+Kumquats
+
+remove temp
+<%= form_for @product  do |f| %>
+  <%= f.label :product %>
+  <%= f.text_field :title %><br>
+  <br />
+
+  <%= f.submit 'add to cart' %>
+<% end %>

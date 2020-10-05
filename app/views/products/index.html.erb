@@ -4,6 +4,14 @@
     <li><%= product %> - <%= product.title %></li>
   <% end %>
 </ul>
-
 <h1>Add Items to the Cart</h1>
+
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
 
