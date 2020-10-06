@@ -1,0 +1,11 @@
+Found Index
+<form method="POST" action="/">
+    <input type="text" id="product" name="product">
+    <input type="submit" value="add to cart">
+</form>
+
+<% if !cart.empty? %>
+    <%= cart.each do |product|  %>
+        <%= product %>
+    <% end %>
+<% end %>
