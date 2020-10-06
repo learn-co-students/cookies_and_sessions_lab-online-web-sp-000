@@ -12,9 +12,8 @@ class ApplicationController < ActionController::Base
 
   def add_to_cart
     # Get the item from the path
-    @item = Item.find(params[:id])
-   
+    @product = Product.create(title: params[:product])
     # Load the cart from the session, or create a new empty cart.
-    cart << @item.id
+    cart << @product
   end
 end

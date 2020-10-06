@@ -1,7 +1,9 @@
 <p>Welcome to Product Index</p>
 <ul>
-  <% @products.each do |product| %>
-    <li><%= product %> - <%= product.title %></li>
+  <% if session[:cart] != [] %>
+    <% session[:cart].each do |product| %>
+      <li><%= product %> - <%= product["title"] %></li>
+    <% end %>
   <% end %>
 </ul>
 <h1>Add Items to the Cart</h1>

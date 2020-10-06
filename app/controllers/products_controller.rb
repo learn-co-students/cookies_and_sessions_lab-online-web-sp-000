@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
     def index
-        @products = Product.all
+        @products = cart
         @product = Product.new
     end
 
@@ -13,6 +13,12 @@ class ProductsController < ApplicationController
         @product.save
         @products = Product.all
 
+        redirect_to '/'        
+    end
+
+    def add
+        add_to_cart
+        binding.pry
         redirect_to '/'        
     end
 end

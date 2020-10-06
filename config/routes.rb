@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :application
   resources :products, only: [:index, :new, :create]
+  post '/', to: "products#add"
+
   root to: 'products#index'
 
 end
