@@ -1,16 +1,20 @@
-class ProductsController < ActionController::Base
+class ProductsController < ApplicationController
 
    def index
-    binding.pry
-    @cart = session[:cart]
+    #binding.pry
+    @cart = cart
+
     end
 
     def add
-
+        @cart = cart
         @product = params[:product]
-        @cart = session[:cart] ||= []
+        
         @cart << @product
+        session[:cart] = @cart
+      
 
     end
 
+  
 end

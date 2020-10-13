@@ -1,0 +1,11 @@
+<%= form_tag('/products/add', method: :post) do %>
+    <input type = "text" name = "product" >
+    <input type = "submit" value = "add to cart"
+    <% end %>
+
+    <% if !@cart.nil? %>
+    <% #binding.pry %>
+    <%= @cart.each do |product| %>
+<p><% product %> </p>
+        <% end %>
+        <% end %>
