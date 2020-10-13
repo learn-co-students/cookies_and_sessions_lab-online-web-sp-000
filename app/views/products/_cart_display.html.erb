@@ -1,0 +1,7 @@
+
+    <% if !@cart.nil? %>
+  
+    <%= @cart.each do |product| %>
+        <%= product %> 
+                <% end %>
+    <% end %>
