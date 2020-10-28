@@ -1,0 +1,12 @@
+<%= form_tag root_path do |f| %>
+    <input type="text" name="product">
+    <input type="submit" value="add to cart">
+<% end %>
+
+
+<h2>Your Cart</h2>
+<ol>
+<% cart.each do |product| %>
+    <%= content_tag :li, product %>
+<% end %>
+</ol>
