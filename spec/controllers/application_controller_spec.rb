@@ -5,7 +5,7 @@ RSpec.describe ApplicationController do
     it "returns the user's shopping cart, an initially empty array" do
       expect(controller.cart).to eq []
     end
-
+    
     it "creates a cart in the session if one doesn't exist" do
       expect(@request.session[:cart]).to be nil
       expect(controller.cart).to eq session[:cart]
