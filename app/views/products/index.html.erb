@@ -1,0 +1,9 @@
+<%= form_tag "/" do %>
+  <label for="product">Product</label>
+  <input type="text" name="product" id="product">
+  <input type="submit" value="add to cart">
+<% end %>
+<h1>Current Cart</h1>
+<% cart.each do |item| %>
+<p><%= item %></p>
+<% end %>
