@@ -1,0 +1,7 @@
+<%= form_for @product, :url => url_for(controller: "application", action: "homepage", method: "post" ) do |f|%>
+  <%= f.text_field :product %>
+  <%= f.submit %>
+<% end %>
+
+
+
