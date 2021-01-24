@@ -1,0 +1,11 @@
+<h1> Cart: </h1>
+<ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
+
+<form action="/" method="post">
+    <input type="text" id="product" name="product">
+    <input type=submit value='add to cart'>
+</form> 
