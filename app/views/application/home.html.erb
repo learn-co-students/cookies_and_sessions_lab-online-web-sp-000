@@ -1,0 +1,18 @@
+<h1>Homepage</h1>
+<h2>Your Items<h2>
+<div>
+<ul>
+    <% @cart.each do | item | %>
+        <li><%= item %></li>
+    <% end %>
+</ul>
+</div>
+<h2>Search For Items to Add to Your Cart</h2>
+<div>
+    <form method= "post" action= "/products">
+        <strong>
+            Item: <input type= 'text' name= 'product'>
+        </strong>
+        <input type= 'submit' value= "add to cart">
+    </form>
+</div>
