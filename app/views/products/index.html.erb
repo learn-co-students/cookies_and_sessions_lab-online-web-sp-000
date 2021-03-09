@@ -3,9 +3,11 @@
     <input type="submit" id="add to cart">
 </form>
 <ul>
-    <% if @cart != nil %>
-        <% @cart.each do |product| %>
+    <% if cart != nil %>
+        <% cart.each do |product| %>
             <li><%= product %></li>
         <% end %>
+    <% else %>
+        Your cart is empty
     <% end %>
 </ul>
