@@ -1,9 +1,11 @@
 <form action="/add">
-    <input type="text" name="product_name" id="product">
+    <input type="text" name="product" id="product">
     <input type="submit" id="add to cart">
 </form>
 <ul>
-    <% session[:cart].each do |product| %>
-        <li><%= product %></li>
+    <% if @cart != nil %>
+        <% @cart.each do |product| %>
+            <li><%= product %></li>
+        <% end %>
     <% end %>
 </ul>

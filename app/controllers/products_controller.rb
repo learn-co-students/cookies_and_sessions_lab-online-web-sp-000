@@ -1,9 +1,14 @@
-class ProductsController < ActionController::Base
-    def 
-        @cart = cart
+class ProductsController < ApplicationController
+    def index
+        @cart = session[:cart]
     end
     def add
-        session[:cart] << params[:product_name]
+        puts params 
+        puts "HEREEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        puts params[:product]
+        puts "HEREEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+        cart << params[:product]
         redirect_to root_path
     end
 
