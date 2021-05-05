@@ -1,0 +1,7 @@
+<%= form_tag '/products/add' do %>
+    <%= hidden_field_tag :cart, value: session[:cart] %>
+    <%= label_tag 'product', "Add Product" %><br>
+    <%= text_field_tag 'product' %><br>
+    
+    <%= submit_tag "add to cart" %>
+<% end %>
